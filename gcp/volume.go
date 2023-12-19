@@ -22,7 +22,7 @@ type volumeRequest struct {
 	CreationToken          string         `structs:"creationToken,omitempty"`
 	ProtocolTypes          []string       `structs:"protocolTypes,omitempty"`
 	Network                string         `structs:"network,omitempty"`
-	Size                   int            `structs:"quotaInBytes,omitempty"`
+	Size                   int64          `structs:"quotaInBytes,omitempty"`
 	ServiceLevel           string         `structs:"serviceLevel,omitempty"`
 	SnapshotPolicy         snapshotPolicy `structs:"snapshotPolicy,omitempty"`
 	ExportPolicy           exportPolicy   `structs:"exportPolicy"`
@@ -47,7 +47,7 @@ type volumeResult struct {
 	CreationToken         string         `json:"creationToken,omitempty"`
 	ProtocolTypes         []string       `json:"protocolTypes,omitempty"`
 	Network               string         `json:"network,omitempty"`
-	Size                  int            `json:"quotaInBytes,omitempty"`
+	Size                  int64          `json:"quotaInBytes,omitempty"`
 	ServiceLevel          string         `json:"serviceLevel,omitempty"`
 	SnapshotPolicy        snapshotPolicy `json:"snapshotPolicy,omitempty"`
 	ExportPolicy          exportPolicy   `json:"exportPolicy,omitempty"`
